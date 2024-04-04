@@ -1,14 +1,11 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from './app.module.css';
+import React from 'react';
 
-import NxWelcome from './nx-welcome';
+export const App: React.FC = () => {
+  const [message, setMessage] = React.useState<string>("Hello, Nx!");
 
-export function App() {
   return (
     <div>
-      <NxWelcome title="myorg" />
+      <h1>{message}</h1>
     </div>
   );
 }
-
-export default App;
