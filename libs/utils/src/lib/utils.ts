@@ -1,9 +1,8 @@
-export type SomeType = {
-  someField: string;
-};
+import { create } from 'zustand';
 
-export function utils(): SomeType {
-  return {
-    someField: "someValue",
-  }
+type ZustandStore = {
+  someValue: string;
 }
+export const useZustandStore = create<ZustandStore>(() => ({
+  someValue: 'Hello, Zustand!',
+}));
