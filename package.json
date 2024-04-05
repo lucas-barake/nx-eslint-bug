@@ -2,7 +2,9 @@
   "name": "@myorg/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "lint": "nx run-many --target=lint --all"
+  },
   "private": true,
   "dependencies": {
     "react": "18.2.0",
