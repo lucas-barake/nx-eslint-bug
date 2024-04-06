@@ -1,8 +1,9 @@
 import React from 'react';
-import { useZustandStore } from '@myorg/utils';
+import { useZustandStore, useAnotherZustandStore } from '@myorg/utils';
 
 export const App: React.FC = () => {
   const [message, setMessage] = React.useState<string>("Hello, Nx!");
+  const anotherStore = useAnotherZustandStore((state) => state.someValue);
   const store = useZustandStore((state) => state.someValue);
 
   return (
